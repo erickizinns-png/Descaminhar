@@ -1,0 +1,15 @@
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+-- Remove todas as animações atuais
+local animator = humanoid:FindFirstChildOfClass("Animator")
+if animator then
+    for _, track in pairs(animator:GetPlayingAnimationTracks()) do
+        track:Stop()
+    end
+    -- Desativa o Animator pra não tocar animações futuras
+    animator:Destroy()
+end
