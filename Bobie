@@ -1,3 +1,9 @@
+-- 1️⃣2️⃣ UNWALK
+_G.WXV = _G.WXV or {}
+_G.WXV.UNWALK = _G.WXV.UNWALK or false
+if not _G.WXV.UNWALK then return end
+
+-- Código do UNWALK aqui
 local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer
